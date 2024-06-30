@@ -12,6 +12,7 @@ export default function EditUser() {
     username: string
     email: string
   }
+  
   const [user, setUser] = useState<User>({
     name: "",
     username: "",
@@ -27,7 +28,7 @@ export default function EditUser() {
   useEffect(() => {
     loadUser()
   }, [])
-  
+
   const onSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     await axios.put(`http://localhost:8080/user/${id}`, user)
@@ -43,10 +44,10 @@ export default function EditUser() {
     <div className="container">
       <div className="row">
         <div className="col-md-5 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-enter m-4">Edit User</h2>
+          <h2 className="text-center m-4">Edit User</h2>
           <form onSubmit={(e) => onSubmit(e)}>
             <div className="mb-3">
-              <label htmlFor="Name" className="form-lael">
+              <label htmlFor="Name" className="form-label">
                 Name
               </label>
               <input
@@ -59,7 +60,7 @@ export default function EditUser() {
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="Name" className="form-lael">
+              <label htmlFor="Name" className="form-label">
                 Username
               </label>
               <input
@@ -72,7 +73,7 @@ export default function EditUser() {
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="Name" className="form-lael">
+              <label htmlFor="Name" className="form-label">
                 Email
               </label>
               <input

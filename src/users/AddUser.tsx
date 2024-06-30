@@ -33,10 +33,10 @@ export default function AddUser() {
     <div className="container">
       <div className="row">
         <div className="col-md-5 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-enter m-4">Register User</h2>
+          <h2 className="text-center m-4">Register User</h2>
           <form onSubmit={(e) => onSubmit(e)}>
             <div className="mb-3">
-              <label htmlFor="Name" className="form-lael">
+              <label htmlFor="Name" className="form-label">
                 Name
               </label>
               <input
@@ -49,7 +49,7 @@ export default function AddUser() {
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="Name" className="form-lael">
+              <label htmlFor="Name" className="form-label">
                 Username
               </label>
               <input
@@ -62,7 +62,7 @@ export default function AddUser() {
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="Name" className="form-lael">
+              <label htmlFor="Name" className="form-label">
                 Email
               </label>
               <input
